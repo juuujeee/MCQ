@@ -1,0 +1,124 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    font-family: 'Raleway';
+    margin:0;
+}
+header {
+    position: fixed;
+    height: 100px;
+    background: #FFF;
+    top: 0;
+    width: 100%;
+    left:0;
+    z-index: 999;
+    transition: all .3s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.header-container {
+    position: relative;
+    max-width:1440px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-menu {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    margin:0;
+    height: 100%;
+}
+.header-menu-item {
+    margin:0;
+    padding: 5px 10px;
+    font-size:17px;
+    font-weight: 600;
+    height: 100%;
+}
+.header-menu-item a {
+    text-decoration: none;
+    color: #111;
+    transition: all .3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-menu-item a.active {
+    color: #213778;
+}
+
+.header-menu-item a:hover {
+    color:#213778;
+}
+
+.header-logo-img {
+    width: 100px;
+    height: 100px;
+    transition: all .3s ease;
+}
+.main-content {
+    background: #efefef;
+    margin-top:100px;
+    width:100%;
+    transition: all .3s ease;
+}
+.header-menu-item a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    width: 0px;
+    height: 2px;
+    background: #213778;
+    transition: all 0.45s ease;
+}
+.header-menu-item a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.company-logo-text {
+    font-size: 23px;
+    margin-left: 5px;
+    font-weight: 600px;
+    transition: all .3s ease;
+}
+
+header.minimized {
+    height: 70px;
+}
+header.minimized .header-logo-img {
+    width: 70px;
+    height: 70px;
+}
+header.minimized .company-logo-text {
+    transform: translateY(-200px);
+}
+header.minimized .header-menu-item a::after {
+    bottom: 30%;
+}
+header.minimized + .main-content {
+    margin-top: 70px;
+}
+
+@media (min-width: 1200px) {
+    .header-container {
+        max-width: 1140px;
+    }
+}
