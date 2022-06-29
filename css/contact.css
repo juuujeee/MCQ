@@ -72,19 +72,23 @@
 }
 
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .contact-container {
+        padding-top: 0;
+    }
+    .contact-content-1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ipads / tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
     
 }
 
-/*Medium devices (tables, 768px and up)*/
-@media (min-width: 768px) {
-
-}
-
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+/* small screens and laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
 }
 

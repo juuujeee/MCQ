@@ -96,7 +96,7 @@ header {
 .company-logo-text {
     font-size: 23px;
     margin-left: 5px;
-    font-weight: 600px;
+    font-weight: 600;
     transition: all .3s ease;
 }
 
@@ -118,26 +118,76 @@ header.minimized + .main-content {
 }
 
 
-
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .company-logo-text {
+        display: none;
+    }
+    .header-container {
+        display: block;
+    }
+    .header-logo {
+        display: block;
+    }
+    .header-menu {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+    }
+    header {
+        height: auto;
+        top: -2px;
+    }
+    .main-content {
+        padding: 15px;
+        margin-top: 70px;
+    }
+    .header-logo-img {
+        width: 70px;
+        height: 70px;
+    }
 }
 
-/*Medium devices (tables, 768px and up)*/
-@media (min-width: 768px) {
-
+/* ipads tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .company-logo-text {
+        display: none;
+    }
+    .company-logo-text {
+        display: none;
+    }
+    .header-container {
+        display: block;
+    }
+    .header-logo {
+        display: block;
+    }
+    .header-menu {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+    }
+    header {
+        height: auto;
+        top: -2px;
+    }
+    .main-content {
+        padding: 15px;
+        margin-top: 70px;
+    }
 }
 
+/* small screens and laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+} 
 
-}
-
-/*Extra large devices (large desktops, 1200px and up)*/
+/*Extra large devices, TV */
 @media (min-width: 1200px) {
     .header-container {
         max-width: 1140px;
+    }
+    .company-logo-text {
+        display: flex;
     }
 }

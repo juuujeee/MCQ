@@ -150,21 +150,30 @@
 }
 
 
-  /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .about-container {
+        padding-top: 0;
+    }
+    .who-we-are-container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 15px;
+    }
+    .who-we-are-text{
+        margin-top: 0;
+    }
+}
+
+/* ipads / tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
     
 }
 
-/*Medium devices (tables, 768px and up)*/
-@media (min-width: 768px) {
+/* small screens and laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
 }
 
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
-}
 
 /*Extra large devices (large desktops, 1200px and up)*/ 
 @media (min-width: 1200px) {

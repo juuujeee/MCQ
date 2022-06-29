@@ -5,16 +5,19 @@
 
     window.addEventListener('scroll', function(e) {
        
-        if(this.scrollY >= 100) {
+        if(this.innerWidth > 767) {
+            if(this.scrollY >= 100) {
             
-            header.classList.add('minimized');
-           // mainContent.setAttribute('style', 'margin-top:70px;');
-            
-        }
-        else{
-            header.classList.remove('minimized');
-           // mainContent.removeAttribute('style');
-        }
+                header.classList.add('minimized');
+               // mainContent.setAttribute('style', 'margin-top:70px;');
+                
+            }
+            else{
+                header.classList.remove('minimized');
+               // mainContent.removeAttribute('style');
+            }
+        } 
+       
     });
 
 })();
