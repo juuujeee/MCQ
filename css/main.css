@@ -125,6 +125,8 @@ header.minimized + .main-content {
     }
     .header-container {
         display: block;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .header-logo {
         display: block;
