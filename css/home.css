@@ -185,6 +185,9 @@
         padding: 10px;
         overflow: hidden;
     }
+    .our-affiliation-container {
+        margin-top: 15px;
+    }
 }
 
 /* ipads / tablets */
