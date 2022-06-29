@@ -162,6 +162,15 @@
     .who-we-are-text{
         margin-top: 0;
     }
+    .mission-vision-container {
+        margin-top: 0;
+    }
+    .our-structure-container{
+        margin-top: 0;
+    }
+    .our-structure-text .title{
+        text-align: left;
+    }
 }
 
 /* ipads / tablets */
