@@ -117,6 +117,60 @@ header.minimized + .main-content {
     margin-top: 70px;
 }
 
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}/* Style label tag */
+
+.hamb-line {
+    background: #000;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: #000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+.side-menu:checked ~ .header-menu {
+    max-height: 100%;
+}
 
 /* mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -147,6 +201,9 @@ header.minimized + .main-content {
     .header-logo-img {
         width: 70px;
         height: 70px;
+    }
+    .header-menu-item {
+        padding: 15px 0;
     }
 }
 
@@ -181,7 +238,9 @@ header.minimized + .main-content {
 
 /* small screens and laptops */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
+    .hamb {
+        display: none;
+    }
 } 
 
 /*Extra large devices, TV */
@@ -191,5 +250,8 @@ header.minimized + .main-content {
     }
     .company-logo-text {
         display: flex;
+    }
+    .hamb {
+        display: none;
     }
 }
