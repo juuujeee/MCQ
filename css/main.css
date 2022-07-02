@@ -11,7 +11,7 @@ body {
 }
 header {
     position: fixed;
-    height: 100px;
+    height: auto;
     background: #FFF;
     top: 0;
     width: 100%;
@@ -30,6 +30,8 @@ header {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px 0;
+    height: 80px;
 }
 .header-logo {
     display: flex;
@@ -38,59 +40,66 @@ header {
 }
 .header-menu {
     display: flex;
-    justify-content: end;
+    justify-content: start;
+    align-items: center;
     list-style-type: none;
     margin:0;
     height: 100%;
 }
 .header-menu-item {
     margin:0;
-    padding: 5px 10px;
+    padding: 10px 24px 10px 22px;
     font-size:17px;
-    font-weight: 600;
     height: 100%;
 }
 .header-menu-item a {
     text-decoration: none;
-    color: #111;
+    color: #FFF;
     transition: all .3s ease;
     height: 100%;
     display: flex;
     align-items: center;
     position: relative;
 }
-.header-menu-item a.active {
-    color: #213778;
-}
 
-.header-menu-item a:hover {
-    color:#213778;
-}
-
-.header-logo-img {
-    width: 100px;
-    height: 100px;
-    transition: all .3s ease;
-}
-.main-content {
-    background: #efefef;
-    margin-top:100px;
-    width:100%;
-    transition: all .3s ease;
-}
 .header-menu-item a::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 35%;
+    bottom: 5%;
     width: 0px;
     height: 2px;
-    background: #213778;
+    background: #FFF;
     transition: all 0.45s ease;
 }
 .header-menu-item a:hover:after {
     width: 100%;
     left: 0;
+}
+.header-menu-item a.active::after {
+    width: 100%;
+    left: 0;
+}
+.menu-has-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-column-gap: 5px;
+}
+.menu-has-dropdown i {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-img {
+    width: 65px;
+    height: 65px;
+    transition: all .3s ease;
+}
+.main-content {
+    background: #efefef;
+    margin-top:135px;
+    width:100%;
+    transition: all .3s ease;
 }
 
 .company-logo-text {
@@ -100,21 +109,23 @@ header {
     transition: all .3s ease;
 }
 
-header.minimized {
-    height: 70px;
+header.minimized .header-container {
+    height: 60px;
 }
 header.minimized .header-logo-img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
-header.minimized .company-logo-text {
-    transform: translateY(-200px);
+
+.header-menu-container {
+    width: 100%;
+    height: 50px;
+    background: #213778;
 }
-header.minimized .header-menu-item a::after {
-    bottom: 30%;
-}
-header.minimized + .main-content {
-    margin-top: 70px;
+.header-menu-container .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 }
 
 /* Menu Icon */
@@ -124,7 +135,7 @@ header.minimized + .main-content {
     padding: 35px 20px;
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0;
 }/* Style label tag */
 
 .hamb-line {
@@ -199,14 +210,17 @@ header.minimized + .main-content {
         margin-top: 70px;
     }
     .header-logo-img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     .header-menu-item {
-        padding: 15px 0;
+        /* padding: 15px 0; */
     }
     .header-menu-item a::after {
         content: none;
+    }
+    .header-menu-container {
+        height: auto;
     }
    
 }
@@ -250,7 +264,8 @@ header.minimized + .main-content {
 
 /*Extra large devices, TV */
 @media (min-width: 1200px) {
-    .header-container {
+    .header-container,
+    .header-menu-container .wrapper {
         max-width: 1140px;
     }
     .company-logo-text {
