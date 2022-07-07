@@ -16,8 +16,18 @@
                 header.classList.remove('minimized');
                // mainContent.removeAttribute('style');
             }
-        } 
+
+        }
        
+    });
+
+
+    let openSubMenus = document.querySelectorAll('.jsHasDropdownMenu');
+    openSubMenus.forEach((item) => {
+        item.addEventListener('click', function(e) {
+            e.currentTarget.nextElementSibling.classList.toggle('hide-menu');
+            e.currentTarget.querySelector('.header-menu-icon').classList.toggle('rotate-180')
+        });
     });
 
 })();
