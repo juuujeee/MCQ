@@ -33,6 +33,14 @@
     margin-top:5px;
 }
 
+.services-item-content h2 a {
+    text-decoration: none;
+    color: #111;
+    transition: all .3s ease;
+}
+.services-item-content h2 a:hover {
+    color: #213778;
+}
 
 
 /* mobile devices */
