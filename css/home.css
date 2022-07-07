@@ -14,16 +14,38 @@
 }
 .services-offered-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    overflow: hidden;
 }
 .services-offered-item {
-    height: 300px;
+    height: 200px;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.services-offered-item h2 {
+    position: absolute;
+    bottom: 0;
+    transition: all .5s ease;
+    margin: 0;
+    padding: 15px 0;
+    width: 100%;
+    background: #00000052;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-weight: 500;
 }
 .services-offered-item img {
     width: 100%;
     height: 100%;
+}
+.services-offered-item:hover h2 {
+    bottom: -300px;
+    background: transparent;
 }
 .our-affiliation-container {
     margin-top:50px;
