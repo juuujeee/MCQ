@@ -274,6 +274,13 @@ header.minimized .company-list-of-services small {
 }
 
 
+.header-submenu {
+    background: #FFF;
+    position: absolute;
+    bottom: -15px;
+    height: 400px;
+}
+
 /* mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .company-logo-text {
