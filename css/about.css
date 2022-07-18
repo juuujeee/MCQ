@@ -175,7 +175,12 @@
     .mission-vision-title{
         margin-bottom: 0;
     }
-   
+    .slide {
+        height: auto;
+    }
+    .who-we-are-images {
+        height: 250px;
+    }
 }
 
 /* ipads / tablets */

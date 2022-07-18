@@ -206,10 +206,14 @@
         height: calc(100% - 25px);
         padding: 10px;
         overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
     }
     .our-affiliation-container {
         margin-top: 15px;
     }
+    
 }
 
 /* ipads / tablets */
