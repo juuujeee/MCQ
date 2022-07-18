@@ -446,6 +446,9 @@ header.minimized .company-list-of-services small {
     .company-list-of-services {
         display: none;
     }
+    .social-media-container {
+        display: none;
+    }
    
 }
 
