@@ -58,6 +58,9 @@
 .services-2 img {
     height: 250px;
 }
+.services-item h2 {
+    margin-bottom: 0;
+}
 
 /* mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
