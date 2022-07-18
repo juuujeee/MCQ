@@ -377,9 +377,6 @@ header.minimized .company-list-of-services small {
     .header-menu-container {
         height: auto;
     }
-    .social-media-container {
-        display: none;
-    }
     .company-list-of-services {
         display: none;
     }
@@ -407,6 +404,15 @@ header.minimized .company-list-of-services small {
     .header-submenu-overviewItem {
         display: block;
         padding-top:10px;
+    }
+    .social-media-container {
+        /* display: none; */
+        position: absolute;
+        right: 75px;
+        top: 20px;
+    }
+    .social-media-item {
+        margin: 0 2px;
     }
 }
 
