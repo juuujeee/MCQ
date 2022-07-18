@@ -61,6 +61,13 @@
 .services-item h2 {
     margin-bottom: 0;
 }
+.services-item-p {
+    margin: 0;
+    font-size: 15px;
+}
+.services-item-h2 {
+    text-align: center;
+}
 
 /* mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
