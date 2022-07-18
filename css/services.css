@@ -18,8 +18,8 @@
 }
 .services-item {
     display: grid;
-    grid-template-rows: 250px 1fr;
-    height: 500px;
+    grid-template-rows: 250px auto;
+    height: auto;
     background: #FFF;
     padding: 10px;
     margin-bottom: 20px;
@@ -47,6 +47,18 @@
     font-size: 12px;
 }
 
+.services-2 {
+    display: flex;
+    justify-content: center;
+}
+.services-2 .services-item {
+    width: 350px;
+    height: auto;
+}
+.services-2 img {
+    height: 250px;
+}
+
 /* mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .services-container {
@@ -56,6 +68,9 @@
     .services-item-container {
         grid-template-columns: 1fr;
         grid-row-gap: 15px;
+    }
+    .services-2 {
+        display: grid;
     }
     
 }
